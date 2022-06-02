@@ -1,21 +1,23 @@
 
-const printDate = function printDate(){
-    let x= new date()
-    let Date = x.getDate()
-    console.log(Date)
+// const printDate = function(){
+//     const num = new Date()
+//     console.log(num.getDate())     
+// }
 
-    
-}
-const printmonth = function(){
-    let x = new date()
-    let Month = x.getMonth()
-    console.log(Month)
-}
+// const printmonth = function(){
+//     const mon = new Date()
+//     console.log(mon.getMonth() + 1)
 
-const getbatchinfo = function(){
-    console.log("radon, W3 D3, the topic for today is node.js module system.")
-}
+// }
 
-module.experts.printDate=printDate
-module.exports.printmonth=printmonth
-module.exports.getbatchinfo=getbatchinfo
+// const getbatchinfo = function(){
+//     consolr.log("Radon,W3D3,the topic is being taughttoday is node.js")
+// }
+
+
+
+
+// module.exports.printDate=printDate
+// module.exports.printmonth=printmonth
+// module.exports.getbatchinfo=getbatchinfo
+
