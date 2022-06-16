@@ -42,21 +42,21 @@ const loginUser = async function (req, res) {
 };
 
 const getUserData = async function (req, res) {
-  let token = req.headers["x-Auth-token"];
-  if (!token) token = req.headers["x-auth-token"];
-  if (!token) return res.send({ status: false, msg: "token must be present" });
+//   let token = req.headers["x-Auth-token"];
+//   if (!token) token = req.headers["x-auth-token"];
+//   if (!token) return res.send({ status: false, msg: "token must be present" });
 
-  console.log(token);
+//   console.log(token);
   
-  let decodedToken = jwt.verify(token, "functionup-thorium");
-  if (!decodedToken)
-    return res.send({ status: false, msg: "token is invalid" });
+//   let decodedToken = jwt.verify(token, "functionup-thorium");
+//   if (!decodedToken)
+//     return res.send({ status: false, msg: "token is invalid" });
 
 //.........Authorization....................//
 
-    let userToBeModified = req.params.userId
-     let userLoggedIn = decodedToken.userId
-    if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
+    // let userToBeModified = req.params.userId
+    //  let userLoggedIn = decodedToken.userId
+    // if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
 
   let userId = req.params.userId;
   let userDetails = await userModel.findById(userId);
@@ -67,20 +67,20 @@ const getUserData = async function (req, res) {
 };
 
 const updateUser = async function (req, res) {
-    let token = req.headers["x-Auth-token"];
-    if (!token) token = req.headers["x-auth-token"];
-    if (!token) return res.send({ status: false, msg: "token must be present" });
-    console.log(token);
-    let decodedToken = jwt.verify(token, "functionup-thorium");
-    if (!decodedToken) {
-      return res.send({ status: false, msg: "token is invalid" });
-    }
+//     let token = req.headers["x-Auth-token"];
+//     if (!token) token = req.headers["x-auth-token"];
+//     if (!token) return res.send({ status: false, msg: "token must be present" });
+//     console.log(token);
+//     let decodedToken = jwt.verify(token, "functionup-thorium");
+//     if (!decodedToken) {
+//       return res.send({ status: false, msg: "token is invalid" });
+    // }
 
     // ...............Authorization.................//
 
-    let userToBeModified = req.params.userId
-     let userLoggedIn = decodedToken.userId
-    if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
+    // let userToBeModified = req.params.userId
+    //  let userLoggedIn = decodedToken.userId
+    // if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
 
 
   let userId = req.params.userId;
@@ -96,20 +96,20 @@ const updateUser = async function (req, res) {
 
 const deleteUser = async function (req, res) {
     
-    let token = req.headers["x-Auth-token"];
-    if (!token) token = req.headers["x-auth-token"];
-    if (!token) return res.send({ status: false, msg: "token must be present" });
-    console.log(token);
-    let decodedToken = jwt.verify(token, "functionup-thorium");
-    if (!decodedToken) {
-      return res.send({ status: false, msg: "token is invalid" });
-    }
+    // let token = req.headers["x-Auth-token"];
+    // if (!token) token = req.headers["x-auth-token"];
+    // if (!token) return res.send({ status: false, msg: "token must be present" });
+    // console.log(token);
+    // let decodedToken = jwt.verify(token, "functionup-thorium");
+    // if (!decodedToken) {
+    //   return res.send({ status: false, msg: "token is invalid" });
+    // }
 
     //...............Authorization.................//
 
-    let userToBeModified = req.params.userId
-     let userLoggedIn = decodedToken.userId
-    if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
+    // let userToBeModified = req.params.userId
+    //  let userLoggedIn = decodedToken.userId
+    // if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
 
       let userId = req.params.userId;
       let user = await userModel.findById(userId);
