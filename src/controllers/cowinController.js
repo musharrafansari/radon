@@ -1,25 +1,25 @@
-let axios = require("axios")
+// let axios = require("axios")
 
-let getDistrictById = async function(req,res){
+// let getDistrictById = async function(req,res){
    
-    try{
-    let id = req.query.district_id
-    let date1 = req.query.date
-    let option1 = {
-        method : "get",
-        url :`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${id}&date=${date1}`
-    }
-    let result = await axios(option1)
-    console.log(result)
-    let data = result.data
-    res.status(200).send({ msg: data, status: true})
-}
-    catch (err) {
-        console.log(err)
-        res.status(500).send({ msg: err.message })
-    }
+//     try{
+//     let id = req.query.district_id
+//     let date1 = req.query.date
+//     let option1 = {
+//         method : "get",
+//         url :`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${id}&date=${date1}`
+//     }
+//     let result = await axios(option1)
+//     console.log(result)
+//     let data = result.data
+//     res.status(200).send({ msg: data, status: true})
+// }
+//     catch (err) {
+//         console.log(err)
+//         res.status(500).send({ msg: err.message })
+//     }
 
-}
+// }
 // let getStates = async function (req, res) {
 
 //     try {
